@@ -15,7 +15,7 @@ public class UserController {
 
     @GetMapping("/{id:\\d+}")
     public User get(@PathVariable Long id) {
-        log.info("获取用户id为 " + id + "的信息");
+        log.debug("获取用户id为 " + id + "的信息");
         return new User(id, "mrbird", "123456");
     }
 
@@ -42,4 +42,5 @@ public class UserController {
     public void delete(@PathVariable Long id) {
         log.info("删除用户成功 " + id);
     }
+
 }

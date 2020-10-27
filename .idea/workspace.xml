@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26610219-c7d5-47fc-a96a-c646c7ed48c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/spring-cloud-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/entity/User.java" afterDir="false" />
+    <list default="true" id="26610219-c7d5-47fc-a96a-c646c7ed48c6" name="Default Changelist" comment="feat: 使用ribbon解决消费者客户端负载均衡问题">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/java/com/yiezi/feignconsumer/FeignConsumerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/java/com/yiezi/feignconsumer/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/java/com/yiezi/feignconsumer/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/java/com/yiezi/feignconsumer/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/java/com/yiezi/feignconsumer/service/UserServiceFallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-consumer/src/test/java/com/yiezi/feignconsumer/FeignConsumerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/filter/HystrixRequestContextServletFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/yiezi/zuulgateway/ZuulGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/yiezi/zuulgateway/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/test/java/com/yiezi/zuulgateway/ZuulGatewayApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/yiezi/eureka/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/ServerCustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/ServerCustomerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-customer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-customer/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,13 +61,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1jDLd2juhOMguT7vuQIVkBM8Vdt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -71,10 +90,16 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yiezi.servercustomer" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yiezi.feignconsumer.controller" />
+      <recent name="com.yiezi.feignconsumer.entity" />
       <recent name="com.yiezi.servercustomer.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\Program Files\workspace\study\sprint-cloud\demo\server-customer" />
       <recent name="D:\Program Files\workspace\study\sprint-cloud\demo\eureka-client" />
       <recent name="D:\Program Files\workspace\study\sprint-cloud\demo\eureka-server" />
@@ -87,41 +112,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServerCustomerApplication (1)">
-    <configuration name="EurekaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eurekaclient" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yiezi.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.eureka.EurekaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eureka-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yiezi.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.eureka.EurekaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.FeignConsumerApplication">
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eurekaserver" />
+      <module name="eureka-client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.eureka.EurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerCustomerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="FeignConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="feign-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.feignconsumer.FeignConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerCustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-customer" />
       <extension name="coverage">
         <pattern>
@@ -130,29 +136,21 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.servercustomer.ServerCustomerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerCustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="servercustomer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yiezi.servercustomer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.servercustomer.ServerCustomerApplication" />
+    <configuration name="ZuulGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuul-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yiezi.zuulgateway.ZuulGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServerCustomerApplication (1)" />
-        <item itemvalue="Spring Boot.EurekaApplication (2)" />
         <item itemvalue="Spring Boot.ServerCustomerApplication" />
-        <item itemvalue="Spring Boot.EurekaApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -160,16 +158,12 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.2087615" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -194,186 +188,203 @@
       <option name="presentableId" value="Default" />
       <updated>1603331800999</updated>
       <workItem from="1603331804064" duration="1651000" />
-      <workItem from="1603333802294" duration="7651000" />
+      <workItem from="1603333802294" duration="7761000" />
+      <workItem from="1603441911462" duration="1741000" />
+      <workItem from="1603676652267" duration="7167000" />
+      <workItem from="1603779013626" duration="5289000" />
+      <workItem from="1603814820248" duration="303000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: 使用ribbon解决消费者客户端负载均衡问题">
+      <created>1603359403297</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603359403297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: 使用ribbon解决消费者客户端负载均衡问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 使用ribbon解决消费者客户端负载均衡问题" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="603" y="162" key="#ServerCustomerApplication" timestamp="1603347237242">
+    <state x="560" y="205" key="#Project_Structure" timestamp="1603691237906">
       <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="205" key="#Project_Structure/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603691237906" />
+    <state x="482" y="144" key="#ServerCustomerApplication" timestamp="1603780019603">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="603" y="162" key="#ServerCustomerApplication/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603347237242" />
-    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1603349463217">
+    <state x="482" y="144" key="#ServerCustomerApplication/0.0.1536.960@0.0.1536.960" timestamp="1603780019603" />
+    <state x="384" y="114" key="#ServerCustomerApplication_(1)" timestamp="1603780002380">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="384" y="114" key="#ServerCustomerApplication_(1)/0.0.1536.960@0.0.1536.960" timestamp="1603780002380" />
+    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1603693987713">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603349463217" />
+    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603693987713" />
     <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603335526573" />
-    <state width="1294" height="262" key="GridCell.Tab.0.bottom" timestamp="1603350219688">
+    <state x="505" y="271" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603780015660">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="505" y="271" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.960@0.0.1536.960" timestamp="1603780015660" />
+    <state x="451" y="472" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603678231238">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.0.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219688" />
-    <state width="1294" height="206" key="GridCell.Tab.0.bottom/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091899" />
-    <state width="1294" height="262" key="GridCell.Tab.0.center" timestamp="1603350219686">
+    <state x="451" y="472" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678231238" />
+    <state x="747" y="427" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1603678233744">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.0.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219686" />
-    <state width="1294" height="206" key="GridCell.Tab.0.center/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091897" />
-    <state width="1294" height="262" key="GridCell.Tab.0.left" timestamp="1603350219685">
+    <state x="747" y="427" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678233744" />
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603815014223">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.0.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219685" />
-    <state width="1294" height="206" key="GridCell.Tab.0.left/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091895" />
-    <state width="1294" height="262" key="GridCell.Tab.0.right" timestamp="1603350219688">
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603691350447" />
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603815014223" />
+    <state x="452" y="140" key="CommitChangelistDialog2" timestamp="1603815138810">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.0.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219688" />
-    <state width="1294" height="206" key="GridCell.Tab.0.right/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091898" />
-    <state width="1294" height="262" key="GridCell.Tab.1.bottom" timestamp="1603350219691">
+    <state x="452" y="140" key="CommitChangelistDialog2/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603359403098" />
+    <state x="452" y="140" key="CommitChangelistDialog2/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603815068747" />
+    <state x="452" y="140" key="CommitChangelistDialog2/0.1103.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603815138810" />
+    <state width="1494" height="251" key="GridCell.Tab.0.bottom" timestamp="1603785238816">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.0.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382736" />
+    <state width="1462" height="313" key="GridCell.Tab.0.bottom/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282406" />
+    <state width="1494" height="251" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1603785238816" />
+    <state width="1462" height="553" key="GridCell.Tab.0.bottom/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297596" />
+    <state width="1158" height="342" key="GridCell.Tab.0.bottom/0.23.1536.893@0.23.1536.893" timestamp="1603780477283" />
+    <state width="1494" height="251" key="GridCell.Tab.0.center" timestamp="1603785238816">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.0.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382735" />
+    <state width="1462" height="313" key="GridCell.Tab.0.center/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282404" />
+    <state width="1494" height="251" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1603785238816" />
+    <state width="1462" height="553" key="GridCell.Tab.0.center/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297594" />
+    <state width="1158" height="342" key="GridCell.Tab.0.center/0.23.1536.893@0.23.1536.893" timestamp="1603780477281" />
+    <state width="1494" height="251" key="GridCell.Tab.0.left" timestamp="1603785238815">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.0.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382734" />
+    <state width="1462" height="313" key="GridCell.Tab.0.left/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282403" />
+    <state width="1494" height="251" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1603785238815" />
+    <state width="1462" height="553" key="GridCell.Tab.0.left/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297594" />
+    <state width="1158" height="342" key="GridCell.Tab.0.left/0.23.1536.893@0.23.1536.893" timestamp="1603780477278" />
+    <state width="1494" height="251" key="GridCell.Tab.0.right" timestamp="1603785238816">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.0.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382736" />
+    <state width="1462" height="313" key="GridCell.Tab.0.right/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282405" />
+    <state width="1494" height="251" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1603785238816" />
+    <state width="1462" height="553" key="GridCell.Tab.0.right/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297595" />
+    <state width="1158" height="342" key="GridCell.Tab.0.right/0.23.1536.893@0.23.1536.893" timestamp="1603780477282" />
+    <state width="1158" height="289" key="GridCell.Tab.1.bottom" timestamp="1603785238814">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.1.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382739" />
+    <state width="1462" height="313" key="GridCell.Tab.1.bottom/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282409" />
+    <state width="1158" height="289" key="GridCell.Tab.1.bottom/0.0.1536.960@0.0.1536.960" timestamp="1603785238814" />
+    <state width="1462" height="553" key="GridCell.Tab.1.bottom/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297598" />
+    <state width="1158" height="342" key="GridCell.Tab.1.bottom/0.23.1536.893@0.23.1536.893" timestamp="1603780477289" />
+    <state width="1158" height="289" key="GridCell.Tab.1.center" timestamp="1603785238813">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.1.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382738" />
+    <state width="1462" height="313" key="GridCell.Tab.1.center/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282407" />
+    <state width="1158" height="289" key="GridCell.Tab.1.center/0.0.1536.960@0.0.1536.960" timestamp="1603785238813" />
+    <state width="1462" height="553" key="GridCell.Tab.1.center/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297597" />
+    <state width="1158" height="342" key="GridCell.Tab.1.center/0.23.1536.893@0.23.1536.893" timestamp="1603780477288" />
+    <state width="1158" height="289" key="GridCell.Tab.1.left" timestamp="1603785238812">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.1.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382737" />
+    <state width="1462" height="313" key="GridCell.Tab.1.left/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282407" />
+    <state width="1158" height="289" key="GridCell.Tab.1.left/0.0.1536.960@0.0.1536.960" timestamp="1603785238812" />
+    <state width="1462" height="553" key="GridCell.Tab.1.left/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297596" />
+    <state width="1158" height="342" key="GridCell.Tab.1.left/0.23.1536.893@0.23.1536.893" timestamp="1603780477284" />
+    <state width="1158" height="289" key="GridCell.Tab.1.right" timestamp="1603785238813">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.1.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603697382738" />
+    <state width="1462" height="313" key="GridCell.Tab.1.right/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603678282408" />
+    <state width="1158" height="289" key="GridCell.Tab.1.right/0.0.1536.960@0.0.1536.960" timestamp="1603785238813" />
+    <state width="1462" height="553" key="GridCell.Tab.1.right/0.1080.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603723297597" />
+    <state width="1158" height="342" key="GridCell.Tab.1.right/0.23.1536.893@0.23.1536.893" timestamp="1603780477288" />
+    <state width="1158" height="289" key="GridCell.Tab.2.bottom" timestamp="1603784000887">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.2.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603694823525" />
+    <state width="1158" height="289" key="GridCell.Tab.2.bottom/0.0.1536.960@0.0.1536.960" timestamp="1603784000887" />
+    <state width="1158" height="289" key="GridCell.Tab.2.center" timestamp="1603784000886">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.2.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603694823524" />
+    <state width="1158" height="289" key="GridCell.Tab.2.center/0.0.1536.960@0.0.1536.960" timestamp="1603784000886" />
+    <state width="1158" height="289" key="GridCell.Tab.2.left" timestamp="1603784000886">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.2.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603694823523" />
+    <state width="1158" height="289" key="GridCell.Tab.2.left/0.0.1536.960@0.0.1536.960" timestamp="1603784000886" />
+    <state width="1158" height="289" key="GridCell.Tab.2.right" timestamp="1603784000886">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state width="1462" height="553" key="GridCell.Tab.2.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603694823525" />
+    <state width="1158" height="289" key="GridCell.Tab.2.right/0.0.1536.960@0.0.1536.960" timestamp="1603784000886" />
+    <state x="498" y="202" key="Maven.ArtifactSearchDialog" timestamp="1603678097250">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.1.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219691" />
-    <state width="1294" height="206" key="GridCell.Tab.1.bottom/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091902" />
-    <state width="1294" height="262" key="GridCell.Tab.1.center" timestamp="1603350219690">
+    <state x="498" y="202" key="Maven.ArtifactSearchDialog/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603678097250" />
+    <state x="610" y="258" key="RollbackChangesDialog" timestamp="1603442944716">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.1.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219690" />
-    <state width="1294" height="206" key="GridCell.Tab.1.center/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091901" />
-    <state width="1294" height="262" key="GridCell.Tab.1.left" timestamp="1603350219689">
+    <state x="610" y="258" key="RollbackChangesDialog/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603442944716" />
+    <state x="336" y="134" key="SettingsEditor" timestamp="1603691524245">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1294" height="262" key="GridCell.Tab.1.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219689" />
-    <state width="1294" height="206" key="GridCell.Tab.1.left/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091900" />
-    <state width="1294" height="262" key="GridCell.Tab.1.right" timestamp="1603350219691">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1294" height="262" key="GridCell.Tab.1.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603350219691" />
-    <state width="1294" height="206" key="GridCell.Tab.1.right/-1792.23.1792.1097/0.0.1920.1080@0.0.1920.1080" timestamp="1603348091901" />
-    <state width="1294" height="79" key="GridCell.Tab.2.bottom" timestamp="1603347432343">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1294" height="79" key="GridCell.Tab.2.bottom/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603347432343" />
-    <state width="1294" height="79" key="GridCell.Tab.2.center" timestamp="1603347432342">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1294" height="79" key="GridCell.Tab.2.center/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603347432342" />
-    <state width="1294" height="79" key="GridCell.Tab.2.left" timestamp="1603347432342">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1294" height="79" key="GridCell.Tab.2.left/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603347432342" />
-    <state width="1294" height="79" key="GridCell.Tab.2.right" timestamp="1603347432343">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1294" height="79" key="GridCell.Tab.2.right/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603347432343" />
-    <state x="336" y="134" key="SettingsEditor" timestamp="1603337345062">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="336" y="134" key="SettingsEditor/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603337345062" />
+    <state x="336" y="134" key="SettingsEditor/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603691524245" />
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1603333815616" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1603359335326">
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1603359412712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603359335326" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603359412712" />
+    <state x="522" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1603779014117">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603441912122" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/-1792.23.1792.1097/0.23.1920.1013@0.23.1920.1013" timestamp="1603676652964" />
+    <state x="522" y="331" key="com.intellij.ide.util.TipDialog/0.0.1536.960@0.0.1536.960" timestamp="1603779014117" />
+    <state x="733" y="274" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603678028303">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="733" y="274" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603678028303" />
+    <state x="290" y="93" key="new project wizard" timestamp="1603779155400">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="389" y="105" key="new project wizard/-1792.0.1792.1120/0.0.1920.1080@0.0.1920.1080" timestamp="1603691218209" />
+    <state x="290" y="93" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1603779155400" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/controller/TestController.java</url>
-          <line>31</line>
+          <line>51</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-customer/src/main/java/com/yiezi/servercustomer/service/UserService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>eurekaclient</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

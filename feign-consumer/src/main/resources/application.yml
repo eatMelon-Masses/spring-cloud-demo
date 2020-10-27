@@ -5,6 +5,10 @@ spring:
   application:
     name: Server-Consumer
 
+feign:
+  hystrix:
+    enabled: true
+
 eureka:
   client:
     serviceUrl:

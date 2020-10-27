@@ -11,3 +11,10 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://peer1:8080/eureka/,http://peer2:8081/eureka/
+logging:
+  level:
+    com:
+      example:
+        demo:
+          service:
+            UserService: debug
